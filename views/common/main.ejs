@@ -29,11 +29,11 @@
                           <h1 class="animate_video_txt">
                             <span id="main_span" style="transition: 0.5s ease-in-out; position: relative; top: 230px;">
                             <span class="animate_wrapper">
-                            <span style="font-family: 'MICE', sans-serif;" class="word01">천년전통의 우리맛, 우리멋</span>
+                            <span style="font-family: 'MICE', sans-serif;" class="word01">한국의 맛, 불고기 국가대표;</span>
                             <span></span>
                             </span><br>
                             <span class="animate_wrapper">
-                            <span style="font-family: 'MICE', sans-serif;" class="word02">"안동한우불고기"</span>
+                            <span style="font-family: 'MICE', sans-serif;" class="word02">한불(HanBul)</span>
                             <span></span>
                             </span>
                             </span>
@@ -63,7 +63,7 @@
       <section class="sec_add_01">
           <img class="mobile_back"  src="/public/img/mobile/brand/mobile_brand02.png"/>
         <div class="sec_add_div">
-            <span class="sec_add_span">천년전통의 우리맛, 우리멋 | "안동한우불고기"</span>
+            <span class="sec_add_span">한국의 맛, 불고기 국가대표 한불(HanBul)</span>
             <span class="sec_add_title">한불 HanBul</span>
             <span class="sec_add_span mgbt_sec_add">한불은 한국불고기, 한양불고기, 한우불고기의 줄임말로</span>
             <span class="sec_add_span mgbt_sec_add">천년 전통을 가진 안동지방의 한우불고기 조리습관으로</span>
@@ -138,29 +138,29 @@
                 <img style="z-index: 9999;" src="/public/img/web/main/main_story_owner.png">
             </div>
         </div>
-        <div class="main_review_box">
-              <div class="main_review_slide">
-                  <!-- Swiper -->
-                  <div class="swiper mySwiper second">
-                      <div class="swiper-wrapper">
-                          <% if(review.length > 0) { %>
-                              <% for(let i = 0; i < Math.min(5, review.length); i++) { %>
-                                  <div class="swiper-slide" style="cursor: pointer;"  data-idx="<%= review[i].idx %>" data-link="/detail?table=review&idx=<%= review[i].idx %>">
-                                  <img class="main_slide_img" src="<%- review[i].thumbnail %>">
-                                          <div class="review_text_box">
-                                              <div class="review_headline" style="font-family: 'MICE', sans-serif;">리뷰</div>
-                                              <div class="review_content" style="font-family: 'MICE', sans-serif;"><%- stripHtmlTags(review[i].memo) %></div>
-                                              <div class="review_date">
-                                                  <div class="date" style="font-family: 'MICE', sans-serif;"><%= formatDate(review[i].regdate) %></div>
-                                              </div>
-                                          </div>
-                                  </div>
-                              <% } %>
-                          <% } %>
-                      </div>
-                  </div>
-              </div>
-        </div>
+<!--        <div class="main_review_box">-->
+<!--              <div class="main_review_slide">-->
+<!--                  &lt;!&ndash; Swiper &ndash;&gt;-->
+<!--                  <div class="swiper mySwiper second">-->
+<!--                      <div class="swiper-wrapper">-->
+<!--                          <% if(review.length > 0) { %>-->
+<!--                              <% for(let i = 0; i < Math.min(5, review.length); i++) { %>-->
+<!--                                  <div class="swiper-slide" style="cursor: pointer;"  data-idx="<%= review[i].idx %>" data-link="/detail?table=review&idx=<%= review[i].idx %>">-->
+<!--                                  <img class="main_slide_img" src="<%- review[i].thumbnail %>">-->
+<!--                                          <div class="review_text_box">-->
+<!--                                              <div class="review_headline" style="font-family: 'MICE', sans-serif;">리뷰</div>-->
+<!--                                              <div class="review_content" style="font-family: 'MICE', sans-serif;"><%- stripHtmlTags(review[i].memo) %></div>-->
+<!--                                              <div class="review_date">-->
+<!--                                                  <div class="date" style="font-family: 'MICE', sans-serif;"><%= formatDate(review[i].regdate) %></div>-->
+<!--                                              </div>-->
+<!--                                          </div>-->
+<!--                                  </div>-->
+<!--                              <% } %>-->
+<!--                          <% } %>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--        </div>-->
 
           <script>
               function setCardNewsHeight() {
@@ -193,25 +193,22 @@
                   <img id="brandImage" src="/public/img/web/main/main_story01.png" width="100%">
               </div>
               <div class="brand_compet">
-                  <button id="01" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story01.png">불고기와 마블링  :  "홍대앞 국밥집 대표님 이야기"</button>
+                  <button id="01" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story01.png">한우1++불고기와 마블링  :  "홍대앞 30년 한우국밥 대표님의 한불이야기"</button>
                   <div class="explan">
-                      <p>내가 30년 요식업에 종사하지만, 불고기에 마블링이 있는것은 처음 봅니다.</p>
-                      <p>누가 한우1++로 불고기를 만듭니까?하고 감탄하였습니다.</p>
+                      <p>내가 30년 넘게 한우관련 식당을 운영하였지만, 불고기에 마블링이 있는 불고기는 처음봅니다. 누가 한우1++로 불고기를 만듭니까?라고 감탄하였습니다.
+                      </p>
                   </div>
-                  <button id="02" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story02.png">불고기와 육향  :  "한불의 약속"</button>
+                  <button id="02" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story02.png">한우1++불고기와 육향  :  "한불의 약속"</button>
                   <div class="explan">
-                      <p>한불은 안동(경북)한우 1++ 원육이 가지고 있는 육질과 풍미를 그대로 전달하기 위하여</p>
-                      <p>깐깐한 선별작업과 포장방법(분리포장)으로 불고기의 풍미를 그대로 전달드리겠습니다.</p>
+                      <p>한불은 안동(경북)한우1++이 가지고 있는 육질과 풍미를 그대로 전달하기 위하여한우1++(7,8,9)등급을 선정하고 불고기와 불고기 양념소스를 분리 포장하여 생산하고 있습니다</p>
                   </div>
-                  <button id="03" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story03.png">불고기와 한불  :  "한불의 맛"</button>
+                  <button id="03" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story03.png">한우1++불고기와 한불:”한국의 맛, 불고기 국가대표＂</button>
                   <div class="explan">
-                      <p>한국의 맛 | 엄마의 맛 | 담백한 맛 | 고소한 맛</p>
-                      <p>엄마의 마음을 담아 완성한 프리미엄 한우 불고기</p>
+                      <p>한불은 엄마입니다. 한불은 가족입니다. 가족이 기쁘고 행복한 날, 엄마는 한불을 준비합니다.</p>
                   </div>
-                  <button id="04" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story04.png">불고기와 양념소스  :  "한불만의 양념소스 이야기"</button>
+                  <button id="04" type="button" class="collapsible" onclick="changeImage(this); collapse(this);" data-img="/public/img/web/main/main_story04.png">한우1++불고기와 불고기 양념소스  :  "한불만의 양념소스 이야기"</button>
                   <div class="explan_04">
-                      <p>한불의 양념소스는 아이와 부모, 가족을 생각하며 완성하였습니다. 물은 연수로 정수하고, 천일염에 </p>
-                      <p>15배 비싼 소금, 양조간장과 안동사과, 양파 등 엄선된 국산농산물로 완성한 프리미엄 양념소스입니다.</p>
+                      <p>한불의 불고기 양념소스는 안동과 경북지방은 중요농산물인 사과, 양파, 마늘, 고추등 우리 농산물과 우리콩으로 완성된 양조간장, 미네랄이 풍부한 소금, 표고버섯으로 완성하였습니다. 특히,천연재료로 완성하여 알레르기유발물질(인공감미료, 식품보존제, 방부제)이 불검출된 건강하고 안전한 우리먹거리입니다.</p>
                   </div>
               </div>
 
@@ -232,8 +229,12 @@
             <img class="mobile_back" src="/public/img/mobile/mobile_main05.png"/>
             <div class="main_card_news">
                 <div class="main_news_title">
-                    <span>HanBul News</span>
-                    <div class="news_title_btm_border"></div>
+                    <div class="main_title_top_div">
+                        <span class="main_title_span1">HanBul News</span>
+                        <span class="main_title_span2" id="hanbul_news_plus">+ 더보기</span>
+                    </div>
+
+                    <div class="notice_title_btm_border"></div>
                 </div>
                 <div class="card_news_p">
                     <% if(news.length > 0) { %>
@@ -268,8 +269,16 @@
                 window.addEventListener('load', setCardNewsHeight);
                 window.addEventListener('resize', setCardNewsHeight);
             </script>
+            <div class="main_notice_title">
+                <div class="main_title_top_div">
+                    <span class="main_title_span1">HanBul Notice</span>
+                    <span class="main_title_span2" id="hanbul_notice_plus">+ 더보기</span>
+                </div>
 
+                <div class="notice_title_btm_border"></div>
+            </div>
             <div class="main_card_notice">
+
                 <% for(let i = 0; i < 3; i++) { %>
                     <div class="card_notice cn_<%= i+1 %>" id="div_card_notice" data-link="/detail?table=notice&idx=<%= notice[i].idx %>">
                         <div class="card_notice_top">
@@ -299,6 +308,13 @@
                             window.location.href = link;
                         }
                     });
+                });
+
+                document.getElementById('hanbul_news_plus').addEventListener('click', function (){
+                   window.location.href = '/news';
+                });
+                document.getElementById('hanbul_notice_plus').addEventListener('click', function (){
+                    window.location.href = '/notice';
                 });
 
             </script>

@@ -62,10 +62,10 @@
     </section>
     <!--섹션1-->
 
-    <section class="section_main_btm review_1">
-        <span class="gallery_top_span">RECENT REVIEWS</span>
+    <section class="section_main_btm review_1" id="review_first_line_div">
+        <span class="gallery_top_span">REVIEWS</span>
 
-        <div class="main_card_notice">
+        <div class="main_card_notice" >
             <% for(let i = 0; i < Math.min(3, lists.length); i++) { %>
                 <div class="card_notice cn_<%= i+1 %>" data-link="/detail?table=review&idx=<%= lists[i].idx %>"
                      data-idx="<%= lists[i].idx %>"

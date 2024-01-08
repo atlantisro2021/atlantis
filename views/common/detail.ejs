@@ -22,7 +22,16 @@
         <div class="detail_memo"> <%- data.memo %> </div>  <!-- 동적으로 Memo를 생성 -->
     </section>
 
+    <section class="detail_btm_section">
+        <div id="detail_btm_container" class="detail_btm_container">
+            <span>목록</span>
+        </div>
+    </section>
+
     <script>
+        document.getElementById('detail_btm_container').addEventListener('click', function (){
+            window.location.href = '/<%- list %>';
+        });
         window.onload = function (){
             setTimeout(() => document.getElementById('main_span').style.top = '0' , 500);
         }

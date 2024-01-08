@@ -27,10 +27,10 @@
     </section>
     <!--섹션1-->
 
-    <section class="section_main_btm review_1">
-        <span class="gallery_top_span">RECENT NEWS</span>
+    <section class="section_main_btm review_1" id="news_first_line_div">
+        <span class="gallery_top_span">NEWS</span>
 
-        <div class="main_card_notice">
+        <div class="main_card_notice" >
             <% for(let i = 0; i < Math.min(3, lists.length); i++) { %>
                 <div class="card_notice cn_<%= i+1 %>" data-link="/detail?table=news&idx=<%= lists[i].idx %>">
                     <div class="card_notice_top">

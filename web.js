@@ -20,7 +20,7 @@ require('dotenv').config()
 const connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'nice2021!',
+    password : '1658',
     database : 'test'
 });
 
@@ -839,9 +839,9 @@ app.get('/detail', (req, res) => {
     if(!table || !idx) return res.status(400).send('Bad Request');
 
     let boardType;
-    if(table === 'review') boardType = 'RECENT REVIEW';
-    else if(table === 'news') boardType = 'RECENT NEWS';
-    else if(table === 'notice') boardType = 'RECENT ANNOUNCE';
+    if(table === 'review') boardType = 'REVIEW';
+    else if(table === 'news') boardType = 'NEWS';
+    else if(table === 'notice') boardType = '공지사항';
     else return res.status(400).send('Invalid Table Name');
     let webBack;
     if(table === 'review') webBack = '/public/img/web/review/review_sec01.png';
@@ -853,13 +853,18 @@ app.get('/detail', (req, res) => {
     else if(table === 'news') mobileBack = '/public/img/mobile/notice/mobile_notice_sec01.png';
     else if(table === 'notice') mobileBack = '/public/img/mobile/notice/mobile_notice_sec01.png';
     else return res.status(400).send('Invalid Table Name');
+    let list;
+    if(table === 'review') list = 'review#review_first_line_div';
+    else if(table === 'news') list = 'news#news_first_line_div';
+    else if(table === 'notice') list = 'notice#notice_table';
+    else return res.status(400).send('Invalid Table Name');
 
     const sql = `SELECT * FROM ?? WHERE idx = ?`;
     connection.query(sql, [table, idx], function (err, result) {
         if(err) throw err;
         if(result.length === 0) return res.status(404).send('Not Found');
 
-        res.render('./common/detail', { data: result[0], boardType: boardType, webBack: webBack, mobileBack: mobileBack });
+        res.render('./common/detail', { data: result[0], boardType: boardType, webBack: webBack, mobileBack: mobileBack, list: list });
     });
 });
 https.createServer(sslOptions, app).listen(443, () => {
